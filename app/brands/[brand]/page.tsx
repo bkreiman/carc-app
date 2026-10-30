@@ -26,6 +26,19 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
 
   return (
     <div className="min-h-screen bg-brand-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Brand',
+            name: b.name,
+            slogan: b.tagline,
+            description: b.description,
+            url: `https://www.carc.com/brands/${b.slug}`,
+          }),
+        }}
+      />
       <NewsNav />
       <div className="max-w-4xl mx-auto px-6 py-16">
         <nav className="text-sm text-brand-muted mb-6">

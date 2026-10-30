@@ -1,0 +1,22 @@
+# CARC.com
+
+> The AI that finds your best car deal. AI-powered search, deal scoring, and negotiation prep across every listing online.
+
+## About
+
+CARC.com helps car buyers find the best deal in seconds: natural language search → AI deal score → ranked results. Coverage spans new and used cars, leases, EVs, and recalls, with calculators for loans, lease-vs-buy, total cost, depreciation, and insurance.
+
+## Key Pages
+
+- [Homepage](https://www.carc.com): AI car search and deal scoring
+- [News](https://www.carc.com/news): Daily automotive news — tariffs, sales, EVs, recalls, deals
+- [Top 10 Lists](https://www.carc.com/top-10): Ranked best cars by category
+- [Brands](https://www.carc.com/brands): Car brands — models, reliability, and what to buy
+- [Guides](https://www.carc.com/guides): Car buying guides
+- [Compare](https://www.carc.com/compare): Side-by-side car comparisons
+- [Calculators](https://www.carc.com/calculators): Auto loan, lease-vs-buy, total cost, depreciation, insurance
+- [Search](https://www.carc.com/search): Search every listing online
+
+## Contact
+
+- Sitemap: https://www.carc.com/sitemap.xml

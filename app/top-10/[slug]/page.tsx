@@ -15,6 +15,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   return {
     title: l.title,
     description: l.description,
+    alternates: { canonical: `https://www.carc.com/top-10/${params.slug}` },
     openGraph: { title: l.title, description: l.description, type: 'article' },
   }
 }
@@ -25,6 +26,23 @@ export default function Top10ListPage({ params }: { params: { slug: string } }) 
 
   return (
     <div className="min-h-screen bg-brand-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: l.title,
+            description: l.description,
+            url: `https://www.carc.com/top-10/${l.slug}`,
+            itemListElement: l.cars.map((c) => ({
+              '@type': 'ListItem',
+              position: c.rank,
+              name: c.name,
+            })),
+          }),
+        }}
+      />
       <NewsNav />
       <div className="max-w-4xl mx-auto px-6 py-16">
         <Link href="/top-10" className="text-brand-blue text-sm font-medium hover:underline">

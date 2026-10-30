@@ -4,6 +4,7 @@ import './globals.css'
 import { ANALYTICS } from '@/lib/analytics'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.carc.com'),
   title: {
     default: 'CARC.com — The AI That Finds Your Best Car Deal',
     template: '%s | CARC.com',

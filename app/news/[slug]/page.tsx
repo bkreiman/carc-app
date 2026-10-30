@@ -15,6 +15,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   return {
     title: a.title,
     description: a.description,
+    alternates: { canonical: `https://www.carc.com/news/${params.slug}` },
     openGraph: {
       title: a.title,
       description: a.description,
@@ -33,6 +34,23 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
   return (
     <div className="min-h-screen bg-brand-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'NewsArticle',
+            headline: a.title,
+            description: a.description,
+            url: `https://www.carc.com/news/${a.slug}`,
+            datePublished: a.dateISO,
+            dateModified: a.dateISO,
+            author: { '@type': 'Organization', name: 'CARC Editorial Team', url: 'https://www.carc.com' },
+            publisher: { '@type': 'Organization', name: 'CARC.com', url: 'https://www.carc.com' },
+            mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.carc.com/news/${a.slug}` },
+          }),
+        }}
+      />
       <NewsNav />
       <article className="max-w-3xl mx-auto px-6 py-16">
         <Link href="/news" className="text-brand-blue text-sm font-medium hover:underline">
