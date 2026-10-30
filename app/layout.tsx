@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://carc.com',
+    url: 'https://www.carc.com',
     siteName: 'CARC.com',
     title: 'CARC.com — The AI That Finds Your Best Car Deal',
     description:
